@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="Man" class="com.pack.spring.Man ">
+<constructor-arg name="name" value="dhoni"></constructor-arg>
+<constructor-arg name="age" value="7"></constructor-arg>
+<constructor-arg name="address" ref="m_addre"></constructor-arg>
+</bean>
+
+<bean id="Women" class="com.pack.spring.Women ">
+<property name="name" value="wad"></property>
+<property name="age" value="17"></property>
+<property name="address" ref="w_addre"></property>
+</bean>
+
+<bean id="m_addre" class="com.pack.spring.Address">
+	<property name="state" value="Tamil Nadu"></property>
+	<property name="city" value="Chennai"></property>
+	<property name="pcode" value="777777"></property>
+</bean>
+
+<bean id="w_addre" class="com.pack.spring.Address">
+	<property name="state" value="Tamil Nadu"></property>
+	<property name="city" value="Chennai"></property>
+	<property name="pcode" value="11111"></property>
+</bean>
+</beans>
