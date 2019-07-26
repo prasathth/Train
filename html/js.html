@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head>
+	<title></title>
+	<script>
+		function abc()
+		{
+			a = confirm("Do you want to exit from the application");
+			if(a)
+				close();
+		}
+
+		function x()
+		{
+			var s = document.getElementById("a1");
+			document.getElementById("a2").innerText = s.value;
+		}
+
+		d = new Date();
+		document.write(d);
+		document.write(navigator.appCodeName);
+		document.write(navigator.appVersion);
+	</script>
+</head>
+<body>
+<script src="javascript.js"></script><hr size="4" color="blue">
+<h3>
+	<script type="text/javascript">
+		a = "rcb"
+		document.write("Type "+typeof(a));
+	</script>
+	<br>
+
+	<input type="text" name="a" id="a1" >
+	<input type="button" name="" onclick="x()" value="press">
+	<br><br>
+	<button onDblClick="abc()">Exit</button>
+
+	<br>
+	Hi <span id="a2"></span>
+</h3>
+</body>
+</html>

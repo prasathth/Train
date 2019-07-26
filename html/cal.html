@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>Calculator</h3>
+<script type="text/javascript">
+	
+	function add()
+	{
+		var a = parseInt(document.getElementById("no1").value);
+		var b = parseInt(document.getElementById("no2").value);
+
+		//console.log(a);
+		if(ver()){
+		//console.log(a);
+		
+		var c = a + b ;
+		document.getElementById("x").innerText = c;
+		//console.log(c);
+		}
+		else
+			alert("wrong input");
+	}
+
+	function sub()
+	{
+		var a = parseInt(document.getElementById("no1").value);
+		var b = parseInt(document.getElementById("no2").value);
+
+		if(ver()){
+		var c = a - b ;
+		document.getElementById("x").innerText = c;
+		}
+		else
+			alert("wrong input");
+	}
+
+	function div()
+	{
+		var a = parseInt(document.getElementById("no1").value);
+		var b = parseInt(document.getElementById("no2").value);
+
+		if(ver() && b != 0){
+		var c = a / b ;
+		document.getElementById("x").innerText = c;
+		}
+		else
+			alert("wrong input");
+	}
+
+	function mul()
+	{
+		var a = parseInt(document.getElementById("no1").value);
+		var b = parseInt(document.getElementById("no2").value);
+
+		if(ver()){
+		var c = a * b ;
+		document.getElementById("x").innerText = c;
+		}
+		else
+			alert("wrong input");
+	}
+
+	function ver() {
+		var a = document.getElementById("no1").value;
+		var b = document.getElementById("no2").value;
+
+		if((a=='') || (b=='') || isNaN(a) || isNaN(b)){
+			//alert("empty");
+			return false;
+		}
+		else
+			return true;
+	}
+</script>
+
+	Value 1  <input type="text" name="n1" id="no1"><br><br>
+	Value 2  <input type="text" name="n2" id="no2"><br><br>
+
+	<b>Result <span id="x"></span><br></b>
+	<input type="button" name="" onclick="add()" value="add">
+	<input type="button" name="" onclick="sub()" value="sub">
+	<input type="button" name="" onclick="div()" value="div">
+	<input type="button" name="" onclick="mul()" value="multi">
+	
+</body>
+</html>

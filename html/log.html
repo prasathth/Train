@@ -1,0 +1,31 @@
+<html>
+<head>
+	<style type="text/css">
+		span{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		function check()
+		{
+			var x = document.g.un.value;
+			var y = document.g.pw.value;
+			//console.log(x.length);
+			if((x.length < 6) || (x.length > 10))
+				document.getElementById("u1").innerText = "Username must be between 6 - 10 characters";
+			else if( (y.length < 4) || (y.length > 8))
+				document.getElementById("u2").innerText = "Password must be between 4 - 8 characters";
+			else
+				alert("Success");
+		}
+	</script>
+	<form name="g">
+		Username  <input type="text" name="un" min="6" max="10" required><span id="u1"></span><br><br>
+		Password  <input type="password" name="pw" min="4" max="8" required><span id="u2"></span><br><br>
+
+		<input type="button" name="submit" value="submit" onClick="check()">
+	</form>
+	<a href="sig.html"><button>Signup</button></a>
+</body>

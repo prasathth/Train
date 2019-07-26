@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hi</title>
+	<script type="text/javascript">
+		function abc()
+		{
+			alert("onclick");
+		}
+
+		for(i=0;i<10;i++)
+			document.write("<br>Hello");
+
+		function xyz()
+		{
+			alert("ondoubleclick");
+		}
+
+		function aaa()
+		{
+			alert("onmouseover");
+		}
+
+		function bbb()
+		{
+			alert("onmouseout");
+		}
+
+
+		function check()
+		{
+			var name = document.d1.a1.value;
+			console.log("hello "+name);
+			var length = name.length;
+			if(length < 3)
+				return true;
+			else{
+				alert("enter only max 3 characters");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<br>
+	<hr>
+<form name="d1" action="trail.html" onSubmit="return check()">
+	<input type="text" name="a1"><br><br>
+	<input type="submit" name="a2" value="submit">
+</form>
+<br>
+<br>
+<hr>
+<input type="button" name="a" value="click" onClick="abc()">
+<input type="button" name="a" value="double click" ondblclick="xyz()">
+<input type="button" name="a" value="over" onmouseover="aaa()">
+<input type="button" name="a" value="out" onmouseout="bbb()">
+</body>
+</html>

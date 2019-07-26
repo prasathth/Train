@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function check()
+	{
+		var a = document.a.pw.value;
+		var b = document.a.cpw.value;
+		var d = document.a.pn.value;
+		var e = document.a.un.value ;
+
+		if((e.length > 5) && (e.length < 10) )
+			document.getElementById("u1").innerText = "";
+		else
+			document.getElementById("u1").innerText = "username must be 6-9 characters";
+
+		if((a.length < 4) || (a.length > 7))
+		{
+			document.getElementById("u2").innerText = "Password must be between 4-7 characters";
+		}
+		else
+		{
+			document.getElementById("u2").innerText = "";	
+		}
+
+		if(a!=b)
+		{
+			//document.getElementById("u2").innerText = "Password incorrect";
+			document.getElementById("u3").style.color="red";
+			document.getElementById("u3").innerText = "Password incorrect";
+		}
+		else{
+			document.getElementById("u3").style.color = "green";
+			document.getElementById("u3").innerText = "matched";
+		}
+
+		if(d.length == 10)
+			document.getElementById("u4").innerText = "";
+		else
+			document.getElementById("u4").innerText = "Phone must be 10 digits";
+	}
+
+	function dis()
+	{
+		var a = document.a.un.value;
+		var b = document.a.pw.value;
+		var c = document.a.em.value;
+		var d = document.a.pn.value;
+
+		document.getElementById("d").innerText = "Username : "+a+"\nEmail : "+c+"\nPhone : "+d;
+	}
+</script>
+<form name="a" action="#">
+	username <input type="text" name="un" onkeyup="check()" required> <span id="u1"></span><br><br>
+	password <input type="password" name="pw" onkeyup="check()" required> <span id="u2"></span><br><br>
+	Confirm password <input type="password" name="cpw" onkeyup="check()" required> <span id="u3"></span><br><br>
+	email <input type="email" name="em" required><span id="u3"></span><br><br>
+	phone number <input type="number" name="pn" onkeyup="check()" required><span id="u4"></span><br><br>
+
+	<input type="button" value="submit" onclick="dis()">
+</form>
+	<br>
+	<span id="d"></span>
+</body>
+</html>
