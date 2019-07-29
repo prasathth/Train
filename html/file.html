@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function Emp(name,age)
+		{
+			this.name = name;
+			this.age = age;
+		}
+	</script>
+</head>
+<body>
+<h1>custom objects</h1><hr>
+<script type="text/javascript">
+	obj1 = new Emp("ganesh",10);
+	obj2 = new Object();
+
+	//obj1.name = "vijay";
+	//obj1.age = 10;
+
+	obj2.name = "rahul";
+	obj2.age = 10;
+
+	document.write("<br>"+obj1.name);
+	document.write("<br>"+obj1.age);
+
+	document.write("<br>"+obj2.name);
+	document.write("<br>"+obj2.age);
+</script>
+<hr>
+<script type="text/javascript">
+	a1 = {'name':'rajesh','age':11,'country':'Ind'};
+
+	document.write("<br>"+a1.name);
+	document.write("<br>"+a1.age);
+	document.write("<br>"+a1.country);
+</script>
+	<hr>
+<script type="text/javascript">
+	document.write("<br>"+Math.PI);
+	document.write("<br>"+Math.E);
+	document.write("<br>"+Math.sqrt(100));
+	document.write("<br>"+Math.cbrt(100));
+	document.write("<br>"+Math.random());
+	document.write("<br>"+Math.floor(3.8));
+	document.write("<br>"+Math.ceil(3.3));
+	document.write("<br>"+parseInt(Math.random()*10));
+</script>
+</body>
+</html>
